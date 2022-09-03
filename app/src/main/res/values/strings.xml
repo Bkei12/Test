@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="text_motivational_timer_2" />
+    <string name="text_motivational_timer" />
+</resources>

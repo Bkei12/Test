@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntervalActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/setsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="설정"
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
+                <LinearLayout
+                    android:id="@+id/setsLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/setsText">
+
+                    <Button
+                        android:id="@+id/setsMinusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="decrementSets"
+                        android:text="-"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                    <TextView
+                        android:id="@+id/setsQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:freezesText="true"
+                        android:gravity="center_horizontal"
+                        android:text="12"
+                        android:textColor="#000"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/setsPlusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="incrementSets"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/workText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Work Interval"
+                    android:textColor="#000"
+                    android:textSize="32sp"
+                    app:layout_constraintTop_toBottomOf="@+id/setsLinear" />
+
+                <LinearLayout
+                    android:id="@+id/workLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/workText">
+
+                    <Button
+                        android:id="@+id/workMinusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="decrementWork"
+                        android:text="-"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                    <TextView
+                        android:id="@+id/workQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:freezesText="true"
+                        android:gravity="center_horizontal"
+                        android:text="01 : 30"
+                        android:textColor="#000"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/workPlusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="incrementWork"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/restText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Rest"
+                    android:textColor="#000"
+                    android:textSize="32sp"
+                    app:layout_constraintTop_toBottomOf="@+id/workLinear" />
+
+                <LinearLayout
+                    android:id="@+id/restLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/restText">
+
+                    <Button
+                        android:id="@+id/restMinusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="decrementRest"
+                        android:text="-"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                    <TextView
+
+                        android:id="@+id/restQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:freezesText="true"
+                        android:gravity="center_horizontal"
+                        android:text="00 : 00"
+                        android:textColor="#000"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/restPlusBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:onClick="incrementRest"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000">
+
+            </View>
+
+            <Button
+                android:id="@+id/startBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#ffffff"
+                android:onClick="timerStart"
+                android:text="시작"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="46sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
